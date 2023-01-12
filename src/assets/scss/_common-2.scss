@@ -1,0 +1,73 @@
+//$lgDesktopWidth          : 1400px;
+//$desktopWidth            : 1280px;
+//$smDesktopWidth          : 1024px;
+//$tableWidth              : 768px;
+//$smTableWidth            : 640px;
+//$phoneWidth              : 480px;
+//$smPhoneWidth            : 380px;
+//
+body {
+  //font-family: "Inter", sans-serif;
+  font-family: $font-Inter;
+  margin: 0;
+}
+
+.wrapper {
+  width: 1232px;
+  //width: 80vw;
+  margin: 0 auto;
+}
+
+hr {
+  width:100%;
+  background-color:#AEB6BB;
+  height:1px;
+  border-width: 0;
+}
+
+.line {
+  height: 100%;
+  background-color: #AEB6BB;
+  width: 1px;
+  border-width: 0;
+}
+
+
+//======================================================
+
+//.wrapper {
+//  //display: flex;
+//  //flex-direction: column;
+//  //min-height: 100vh;
+//  width: 1232px;
+//  margin: 0 auto;
+//}
+
+.wrapper-m {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+//
+//.wrapper-content {
+//  display: flex;
+//  flex-direction: column;
+//}
+//
+//.container, .container-m {
+//  //position: relative;
+//  //flex: 0 0 auto;
+//}
+//.container {
+//  margin: 0 auto;
+//  max-width: $lgDesktopWidth;
+//}
+//.container-m {
+//  margin: 0;
+//  // width: 100vw;
+//  width: 380px;
+//}
+
+.bold {
+  font-weight: bold;
+}
