@@ -4,14 +4,16 @@ const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 
 
-// const webpack = require('webpack');
-// const path = require('path');
-
+// По умолчанию ставим режим разработки
 let mode = 'development'
+// Сравниваем с текущим значением переменной NODE_ENV
 if (process.env.NODE_ENV === 'production') {
     mode = 'production'
 }
-console.log(mode + ' mode')
+// Выводим немного статистики
+console.log('Текущий режим: '+mode + ' mode')
+console.log('Корневой каталог проекта: ',__dirname)
+
 
 module.exports = {   //----- начало -----
     // Точка входа
@@ -66,9 +68,9 @@ module.exports = {   //----- начало -----
                 ],
             },
             {
-                test: /\.(png|svg|jpg|jpeg)$/i,
+                test: /\.(png|svg|jpg|webp|jpeg)$/i,
                 type: 'asset/resource',
-                use: [ 'file-loader', 'webp-loader']
+                //use: [ 'file-loader', 'webp-loader']
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,

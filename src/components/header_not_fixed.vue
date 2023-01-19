@@ -1,26 +1,39 @@
 <template lang="pug">
 
-.header(v-if="isDesktop")
-  .t-area
-    //img(:src='HeaderNotFixed.icon_telefon' alt="ico-telefon")
+header(v-if="isDesktop")
+ .gradient-line
+   .wrapper-top
+     .t-area
+        img(:src='HeaderNotFixed.icon_telefon' alt="ico-telefon")
+        list-telefons(:tel='HeaderNotFixed.list_telefons' :is-header="true")
+     .m-area
+        img(:src='HeaderNotFixed.icon_mesto' alt="ico-mesto")
+        span {{ HeaderNotFixed.text_mesto }}
+     .s-area
+        img(:src='HeaderNotFixed.icon_instagram' alt="ico-instagram")
+        span.social-text {{HeaderNotFixed.text_instagram}}
+
+header(v-if="isTablet")
+  .gradient-line
+    .wrapper-top
+      .t-area
+      .m-area-m
+        img(:src='HeaderNotFixed.icon_mesto' alt="ico-mesto")
+        span.font-header {{ HeaderNotFixed.text_mesto }}
+      .s-area
+        img(:src='HeaderNotFixed.icon_instagram' alt="ico-instagram")
+        span.social-text {{HeaderNotFixed.text_instagram}}
+
+header(v-if="isMobile")
+  .gradient-line
+    .wrapper-top-m
+      .t-area-m
+        list-telefons.font-header(:tel='HeaderNotFixed.list_telefons' :is-header="true")
+      .m-area-m
+        span.font-header {{ HeaderNotFixed.text_mesto }}
 
 
 
-  //<div class="t-area">
-  //<img v-if="res > 500" width="20" height="20" src="../assets/images/i-telefon.png" alt="ico-telefon">
-  //<span v-for="(telefon, index) in telefons" :key="index">
-  //<Telefon class="tels" :tel="telefon"></Telefon>
-  //</span>
-  //</div>
-  //<div class="m-area">
-  //<img  v-if="res > 500" width="15" height="25" src="../assets/images/i-mesto.png" alt="ico-area">
-  //<div class="mesto">{{ city }}</div>
-  //</div>
-  //<div v-if="res > 500" class="s-area">
-  //<img width="30" height="30" src="../assets/images/instagram-icon-white.png" alt="ico-social">
-  //<div class="social-text" >{{ text }}</div>
-  //</div>
-.header(v-if="isMobile")
 
 
 </template>
@@ -28,27 +41,48 @@
 <script>
 import {useStore} from 'vuex';
 import {computed} from "vue";
+import ListTelefons from '@/components/NumberTelefon.vue'
 export default {
-  name: "header",
-
+  name: "header_not_fixed",
+  components: {ListTelefons},
     setup() {
       const store = useStore();
       const HeaderNotFixed = computed(()=> store.getters.getHeaderNotFixed);
-      // const iconTelefon = computed(()=> store.getters.getHeaderNotFixed.icon_telefon);
-      // const iconTelefon = computed(()=> store.getters.getHeaderNotFixed.icon_telefon);
-      // const iconMesto = computed(()=> store.getters.getHeaderNotFixed.icon_mesto);
-      // const iconInstagram = computed(()=> store.getters.getHeaderNotFixed.icon_instagram);
-      // const textMesto = computed(()=> store.getters.getHeaderNotFixed.text_mesto);
-      // const textInstagram = computed(()=> store.getters.getHeaderNotFixed.text_instagram);
       const isMobile = computed(() => store.getters.getIsMobile);
+      const isTablet = computed(() => store.getters.getIsTablet);
       const isDesktop = computed(() => store.getters.getIsDesktop);
-      return { isMobile, isDesktop, HeaderNotFixed }
-      // return { isMobile, isDesktop, iconInstagram, iconMesto, iconTelefon, textMesto, textInstagram }
+      return { isMobile, isTablet, isDesktop, HeaderNotFixed }
     }
 
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+:deep(.telefon) {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 27px;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-left: 15px;
+}
+
+:deep(.telefon-m) {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+//:deep(.telefon-mf) {
+//  font-size: 12px;
+//  font-weight: 600;
+//  line-height: 20px;
+//  letter-spacing: 0.5px;
+//  text-decoration: none;
+//  color: #ffffff;
+//}
+
 
 </style>

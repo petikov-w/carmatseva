@@ -10,7 +10,7 @@
 import {useStore} from 'vuex';
 import {computed} from "vue";
 export default {
-  name: "header",
+  name: "header_fixed",
 
     setup() {
       const store = useStore();
