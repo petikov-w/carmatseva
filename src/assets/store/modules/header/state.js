@@ -1,5 +1,5 @@
 export default {
-    header_not_fixed: {
+    header: {
         icon_telefon: require('@/assets/images/i-telefon.webp'),
         icon_mesto: require('@/assets/images/i-mesto.webp'),
         icon_instagram: require('@/assets/images/instagram-icon-white.webp'),

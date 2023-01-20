@@ -1,4 +1,4 @@
-export const getHeaderNotFixed = (state) => state.header_not_fixed
+export const getHeader = (state) => state.header
 export const getHeaderFixed = (state) => state.header_fixed
 
 

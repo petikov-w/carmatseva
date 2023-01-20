@@ -5,13 +5,14 @@ header_not_fixed
 
 <script>
 //import Header from "@/components/header_not_fixed.vue";
-import Header_not_fixed from "@/components/header_not_fixed.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 import {useStore} from 'vuex';
 import {computed, onMounted} from "vue";
 
 export default {
   name: "App",
-  components: {Header_not_fixed},
+  components: {Header, Footer},
   setup() {
 
     const store = useStore();
