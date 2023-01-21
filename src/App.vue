@@ -1,5 +1,6 @@
 <template lang="pug">
-header_not_fixed
+Header
+Footer
 
 </template>
 

@@ -7,9 +7,13 @@ export default {
         text_instagram: "посетите наш блог",
         list_telefons : ["79286570982", "79092984376"]
     },
-
-    header_fixed: {
-        logo: 'EVARAGS',
-        nav_menu: ["отзывы", "что это?", "контакты"]
-    }
+    footer: {
+        blick_2: require('@/assets/images/blik-eva-m.webp'),
+        blick_3: require('@/assets/images/blik-eva-s.webp'),
+        icon_instagram: require('@/assets/images/instagram-icon.webp'),
+        title_1: "МЫ В СОЦИАЛЬНЫХ СЕТЯХ",
+        title_2: "КОНТАКТНЫЕ ТЕЛЕФОНЫ",
+        title_3: "О НАС",
+        text_3: "Индивидуальное изготовление EVA ковриков для вашего автомобиля"
+    },
 }

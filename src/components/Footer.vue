@@ -1,4 +1,6 @@
-<template>
+<template lang="pug">
+h1 {{ Footer.title_1 }}
+
 <!--    <div class="footer">-->
 <!--      <img v-if="res > 500" class="blik-2" src="../assets/images/blik-eva-m.png" alt="blik">-->
 <!--      <img v-if="res > 500" class="blik-3" src="../assets/images/blik-eva-s.png" alt="blik">-->
@@ -39,11 +41,12 @@ export default {
   components: {ListTelefons},
   setup() {
     const store = useStore();
-    //const Header = computed(()=> store.getters.getHeader);
+    const Header = computed(()=> store.getters.getHeader);
+    const Footer = computed(()=> store.getters.getFooter);
     const isMobile = computed(() => store.getters.getIsMobile);
     const isTablet = computed(() => store.getters.getIsTablet);
     const isDesktop = computed(() => store.getters.getIsDesktop);
-    return { isMobile, isTablet, isDesktop }
+    return { isMobile, isTablet, isDesktop, Header, Footer }
   }
 }
 </script>
