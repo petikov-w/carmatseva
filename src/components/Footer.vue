@@ -1,11 +1,11 @@
 <template lang="pug">
 footer(v-if="isDesktop")
-  img.blik-2(:src="Footer.blick_2" alt="blick")
-  img.blik-3(:src="Footer.blick_3" alt="blick")
+  img.blik-2(:src="Footer.blick" alt="blick")
+  img.blik-3(:src="Footer.blick" alt="blick")
 
 footer(v-if="isTablet")
-  img.blik-3-t(:src="Footer.blick_3" alt="blick")
-  img.blik-2-t(:src="Footer.blick_2" alt="blick")
+  img.blik-3-t(:src="Footer.blick" alt="blick")
+  img.blik-2-t(:src="Footer.blick" alt="blick")
 
 footer(v-if="isMobile")
 
