@@ -1,0 +1,21 @@
+footer {
+  position: relative;
+  margin-bottom: 100px;
+  .blik-2 {
+    position: absolute;
+    @include blik(15px, 0, 110px, 264px, 233px, 0);
+    &-t {
+      position: absolute;
+      @include blik(82px, 115px, 0, 97px, 86px, 10deg);
+    }
+  }
+  .blik-3 {
+    position: absolute;
+    @include blik(82px, 55px, 0, 125px, 110px, 0);
+    &-t {
+      position: absolute;
+      @include blik(91px, 0, 55px, 46px, 41px, 0);
+    }
+  }
+
+}

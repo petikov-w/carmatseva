@@ -1,10 +1,22 @@
-@mixin color($color) {
-  color: $color;
-}
-
 @mixin font($size, $weight, $line-height, $color: blue) {
   font-size: $size;
   font-weight: $weight;
   line-height: $line-height;
   color: $color;
+}
+
+@mixin blik($top, $left, $right, $height, $width, $rotate ){
+  top: $top;
+  @if $left == 0 {
+    right: $right;
+  }
+  @if $right == 0 {
+    left: $left;
+  }
+  @if $rotate > 0 {
+    rotate: $rotate;
+  }
+
+  height: $height;
+  width: $width;
 }

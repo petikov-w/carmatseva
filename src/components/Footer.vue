@@ -1,5 +1,13 @@
 <template lang="pug">
-h1 {{ Footer.title_1 }}
+footer(v-if="isDesktop")
+  img.blik-2(:src="Footer.blick_2" alt="blick")
+  img.blik-3(:src="Footer.blick_3" alt="blick")
+
+footer(v-if="isTablet")
+  img.blik-3-t(:src="Footer.blick_3" alt="blick")
+  img.blik-2-t(:src="Footer.blick_2" alt="blick")
+
+footer(v-if="isMobile")
 
 <!--    <div class="footer">-->
 <!--      <img v-if="res > 500" class="blik-2" src="../assets/images/blik-eva-m.png" alt="blik">-->
@@ -52,78 +60,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer {
-  position: relative;
-  margin-bottom: 100px;
-}
 
-.blik-2 {
-  position: absolute;
-  top: 10px;
-  right: -20px;
-  @media (min-width: 768px) and (max-width: 1200px) {
-    width: 45px;
-    height: 45px;
-    left: 690px;
-    top: 125px;
-  }
-}
-.blik-3 {
-  position: absolute;
-  top: 82px;
-  left: -70px;
-  @media (min-width: 768px) and (max-width: 1200px) {
-    width: 85px;
-    height: 97px;
-    left: 100px;
-    top: 110px;
-  }
-}
+//:deep(.telefon) {
+//  color: #000000;
+//  font-size: 14px;
+//}
 
-.footer-box {
-  display: flex;
-  justify-content: space-around;
-  @media (min-width: 768px) and (max-width: 1200px) {
-    width: 100vw;
-    left: 0;
-  }
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 130px;
-  @media screen and (max-width: 500px) {
-    margin-top: 20px;
-  }
-  h4 {
-    font-size: 14px;
-  }
-  p {
-    max-width: 220px;
-    margin: 0!important;
-   // @include font(14px, 300, 16px);
-  }
-  .img-m {
-    text-align: center!important;
-  }
-}
-
-.social {
-  width: 33px;
-  height: 33px;
-}
-
-:deep(.telefon) {
-  color: #000000;
-  font-size: 14px;
-}
 </style>
