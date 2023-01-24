@@ -17,5 +17,65 @@ footer {
       @include blik(91px, 0, 55px, 46px, 41px, 0);
     }
   }
-
+  .footer-section {
+    display: flex;
+    width: 1000px;
+    padding-left: 100px;
+    .column {
+      margin-top: 172px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 33%;
+      margin-right: 140px;
+      &__title {
+        width: 225px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        margin-bottom: 15px;
+      }
+      &__title_t {
+        width: 225px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 17px;
+        margin-bottom: 15px;
+      }
+      &__content {
+        width: 225px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .footer-section-t {
+    display: flex;
+    width: 1000px;
+    padding-left: 50px;
+    .column {
+      margin-top: 114px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 23%;
+      // margin-right: 140px;
+      &__title {
+        width: 225px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        margin-bottom: 15px;
+      }
+      &__content {
+        width: 225px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+        margin-bottom: 15px;
+      }
+    }
+  }
 }

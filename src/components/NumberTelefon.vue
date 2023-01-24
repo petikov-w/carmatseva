@@ -7,9 +7,13 @@
   div(v-for="(telefon, index) in tel" :key="index")
     a( :href="`tel:${PhoneNumberLink(telefon)}`" class="telefon-m") {{ PhoneNumberFormat(telefon) }}
 
-.telefon-mf(v-if="isMobile && componentName==='footer'")
+.telefon-m(v-if="isTablet && componentName==='footer'")
   div(v-for="(telefon, index) in tel" :key="index")
-    a( :href="`tel:${PhoneNumberLink(telefon)}`" class="telefon-mf") {{ PhoneNumberFormat(telefon) }}
+    a( :href="`tel:${PhoneNumberLink(telefon)}`" class="telefon-m") {{ PhoneNumberFormat(telefon) }}
+
+.telefon-m(v-if="isMobile && componentName==='footer'")
+  div(v-for="(telefon, index) in tel" :key="index")
+    a( :href="`tel:${PhoneNumberLink(telefon)}`" class="telefon-m") {{ PhoneNumberFormat(telefon) }}
 
 </template>
 
@@ -26,6 +30,7 @@ export default {
     const number = props.tel;
     const isHeader = ref(props.isHeader);
     const isMobile = computed(() => store.getters.getIsMobile);
+    const isTablet = computed(() => store.getters.getIsTablet);
     const isDesktop = computed(() => store.getters.getIsDesktop);
     const componentName = computed(() => isHeader.value ? "header" : "footer");
     //==============================================================
@@ -61,6 +66,7 @@ export default {
              PhoneNumberLink,
              isMobile,
              isDesktop,
+             isTablet,
              componentName,
              number   }
   }

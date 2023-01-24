@@ -1,43 +1,42 @@
 <template lang="pug">
 footer(v-if="isDesktop")
-  img.blik-2(:src="Footer.blick" alt="blick")
-  img.blik-3(:src="Footer.blick" alt="blick")
+  //img.blik-2(:src="Footer.blick" alt="blick")
+  //img.blik-3(:src="Footer.blick" alt="blick")
+  .wrapper
+    img.blik-3(:src="Footer.blick" alt="blick")
+    img.blik-2(:src="Footer.blick" alt="blick")
+    .footer-section
+      .column
+       .column__title {{ Footer.title_1 }}
+       img(:src="Footer.icon_instagram" alt="icon_instagram")
+      .column
+       .column__title {{ Footer.title_2 }}
+       list-telefons(:tel='Header.list_telefons' :is-header="false" )
+      .column
+       .column__title {{ Footer.title_3 }}
+       .column__content {{ Footer.text_3 }}
+       .column__content {{ Header.text_mesto }}
 
 footer(v-if="isTablet")
-  img.blik-3-t(:src="Footer.blick" alt="blick")
-  img.blik-2-t(:src="Footer.blick" alt="blick")
+  .wrapper
+    img.blik-3-t(:src="Footer.blick" alt="blick")
+    img.blik-2-t(:src="Footer.blick" alt="blick")
+    .footer-section-t
+      .column
+        .column__title {{ Footer.title_1 }}
+        img(:src="Footer.icon_instagram" alt="icon_instagram")
+      .column
+        .column__title {{ Footer.title_2 }}
+        list-telefons(:tel='Header.list_telefons' :is-header="false" )
+      .column
+        .column__title {{ Footer.title_3 }}
+        .column__content {{ Footer.text_3 }}
+        .column__content {{ Header.text_mesto }}
+
 
 footer(v-if="isMobile")
 
-<!--    <div class="footer">-->
-<!--      <img v-if="res > 500" class="blik-2" src="../assets/images/blik-eva-m.png" alt="blik">-->
-<!--      <img v-if="res > 500" class="blik-3" src="../assets/images/blik-eva-s.png" alt="blik">-->
-<!--      <div class="wrapper">-->
-<!--        <div class="footer-box">-->
-<!--          <div v-if="res > 500" class="box">-->
-<!--              <h4>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h4>-->
-<!--              <img class="social" src="../assets/images/instagram-icon.png" alt="instagram">-->
-<!--          </div>-->
 
-<!--          <div class="box">-->
-<!--              <h4>КОНТАКТНЫЕ ТЕЛЕФОНЫ</h4>-->
-<!--              <span v-for="(telefon, index) in telefons" :key="index">-->
-<!--                <Telefon class="tels" :tel="telefon"></Telefon>-->
-<!--              </span>-->
-<!--          </div>-->
-<!--          <div v-if="res < 500" class="box">-->
-<!--            <h4>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h4>-->
-<!--            <div class="img-m">-->
-<!--              <img class="social" src="../assets/images/instagram-icon.png" alt="instagram">-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="box">-->
-<!--              <h4>О НАС</h4>-->
-<!--              <p>{{ text }}<br><br>{{ city }}</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    </div>-->
 </template>
 
 <script>
@@ -61,9 +60,22 @@ export default {
 
 <style lang="scss" scoped>
 
-//:deep(.telefon) {
-//  color: #000000;
-//  font-size: 14px;
-//}
+:deep(.telefon) {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  text-decoration: none;
+  color: #000000;
+  display: block;
+}
+
+:deep(.telefon-m) {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  text-decoration: none;
+  color: #000000;
+  display: block;
+}
 
 </style>
