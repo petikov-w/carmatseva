@@ -1,0 +1,38 @@
+%flex-row {
+  display: flex;
+}
+%flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  &_row {
+    &__s {
+      @extend %flex-row;
+      justify-content: flex-start;
+    }
+    &__c {
+      @extend %flex-row;
+      justify-content: center;
+    }
+    &__e {
+      @extend %flex-row;
+      justify-content: flex-end;
+    }
+  }
+  &_col {
+    &__s {
+      @extend %flex-col;
+      align-items: flex-start;
+    }
+    &__c {
+      @extend %flex-col;
+      align-items: center;
+    }
+    &__e {
+      @extend %flex-col;
+      align-items: flex-end;
+    }
+  }
+}
