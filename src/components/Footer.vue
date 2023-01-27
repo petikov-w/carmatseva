@@ -3,7 +3,7 @@ footer(v-if="isDesktop")
   .wrapper
     img.blik-3(:src="Footer.blick" alt="blick")
     img.blik-2(:src="Footer.blick" alt="blick")
-    .footer-section.flex_row__c
+    .footer-section.flex_row__s
       .column.flex_col__s
        .column__title {{ Footer.title_1 }}
        img(:src="Footer.icon_instagram" alt="icon_instagram")
@@ -19,29 +19,28 @@ footer(v-if="isTablet")
   .wrapper
     img.blik-3-t(:src="Footer.blick" alt="blick")
     img.blik-2-t(:src="Footer.blick" alt="blick")
-    .footer-section-t
-      .column
+    .footer-section-t.flex_row__s
+      .column.flex_col__s
         .column__title {{ Footer.title_1 }}
         img(:src="Footer.icon_instagram" alt="icon_instagram")
-      .column
+      .column.flex_col__s
         .column__title {{ Footer.title_2 }}
         list-telefons(:tel='Header.list_telefons' :is-header="false" )
-      .column
+      .column.flex_col__s
         .column__title {{ Footer.title_3 }}
         .column__content {{ Footer.text_3 }}
         .column__content {{ Header.text_mesto }}
 
-
 footer(v-if="isMobile")
-.wrapper
-  .footer-section-t
-    .column.flex_col__s
-      .column__title {{ Footer.title_1 }}
-      img(:src="Footer.icon_instagram" alt="icon_instagram")
-    .column.flex_col__s
+  .wrapper
+  .footer-section-m.flex_col__c
+    .column.flex_col__c
       .column__title {{ Footer.title_2 }}
       list-telefons(:tel='Header.list_telefons' :is-header="false" )
-    .column.flex_col__s
+    .column.flex_col__c
+      .column__title {{ Footer.title_1 }}
+      img(:src="Footer.icon_instagram" alt="icon_instagram")
+    .column
       .column__title {{ Footer.title_3 }}
       .column__content {{ Footer.text_3 }}
       .column__content {{ Header.text_mesto }}

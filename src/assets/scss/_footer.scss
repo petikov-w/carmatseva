@@ -1,6 +1,22 @@
+%title {
+  width: 225px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-bottom: 15px;
+}
+%content {
+  width: 225px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  margin-bottom: 15px;
+}
+
+
 footer {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   .blik-2 {
     position: absolute;
     @include blik(15px, 0, 110px, 264px, 233px, 0);
@@ -18,35 +34,23 @@ footer {
     }
   }
   .footer-section {
-    //display: flex;
-    width: 1000px;
-    padding-left: 100px;
+    //width: 1000px;
+    padding-left: 140px;
     .column {
       margin-top: 172px;
-      //display: flex;
-      //flex-direction: column;
-      //align-items: flex-start;
       width: 33%;
-      margin-right: 140px;
+      margin-right: 120px;
       &__title {
-        width: 225px;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 17px;
-        margin-bottom: 15px;
+        @extend %title;
       }
       &__content {
-        width: 225px;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 17px;
-        margin-bottom: 15px;
+        @extend %content;
       }
     }
   }
   .footer-section-t {
     display: flex;
-    width: 1000px;
+   // width: 1000px;
     padding-left: 50px;
     .column {
       margin-top: 114px;
@@ -54,20 +58,27 @@ footer {
       flex-direction: column;
       align-items: flex-start;
       width: 23%;
-      // margin-right: 140px;
       &__title {
-        width: 225px;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 17px;
-        margin-bottom: 15px;
+        @extend %title;
       }
       &__content {
-        width: 225px;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 17px;
-        margin-bottom: 15px;
+        @extend %content;
+      }
+    }
+  }
+  .footer-section-m {
+    display: flex;
+    //width: 400px;
+    margin: 0 auto;
+    .column {
+      margin-top: 25px;
+      &__title {
+        @extend %title;
+        text-align: center;
+      }
+      &__content {
+        @extend %content;
+        text-align: center;
       }
     }
   }
