@@ -1,11 +1,13 @@
 <template lang="pug">
 Header
+router-view
 Footer
 
 </template>
 
 <script>
 //import Header from "@/components/header_not_fixed.vue";
+import Home from "@/pages/HomePage.vue";
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import {useStore} from 'vuex';
@@ -13,7 +15,7 @@ import {computed, onMounted} from "vue";
 
 export default {
   name: "App",
-  components: {Header, Footer},
+  components: {Header, Home, Footer},
   setup() {
 
     const store = useStore();

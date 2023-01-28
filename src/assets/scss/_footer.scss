@@ -54,9 +54,6 @@ footer {
     padding-left: 50px;
     .column {
       margin-top: 114px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       width: 23%;
       &__title {
         @extend %title;
