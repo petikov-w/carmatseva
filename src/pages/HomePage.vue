@@ -1,7 +1,13 @@
 <template lang="pug">
 div(v-if="isDesktop")
  .wrapper
-  img(:src="Home.img_mats.image" :alt="Home.img_mats.alt")
+  .section_hero.flex_row__c
+   .section_hero__info
+      .title {{ Home.title }}
+      .subtitle {{ Home.subtitle }}
+      button {{ Home.subtitle }}
+   .section_hero__img
+      img(:src="Home.img_mats.image" :alt="Home.img_mats.alt")
 
 //home(v-if="isTablet")
 //  .wrapper
