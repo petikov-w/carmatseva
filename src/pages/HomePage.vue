@@ -30,10 +30,11 @@ div(v-if="isTablet")
      img(:src="Home.img_mats.image" :alt="Home.img_mats.alt")
 
 div(v-if="isMobile")
- //.wrapper
-.section_hero-mobile.flex_col__c
-  .section_hero-mobile__info
-   img(:src="Home.logo" :alt="логотип")
+ .section_hero-mobile
+  .section_hero-mobile__info.flex_col__c
+   .section_logo.flex_row__cc
+    img.logo(:src="Home.img_logo.image" :alt="Home.img_logo.alt")
+    .logo-text {{ Home.logo }}
    img(:src="Home.img_background.image" :alt="Home.img_background.alt")
    .title {{ Home.title }}
    .subtitle {{ Home.subtitle }}

@@ -16,6 +16,11 @@
       @extend %flex-row;
       justify-content: center;
     }
+    &__cc {
+      @extend %flex-row;
+      justify-content: center;
+      align-items: center;
+    }
     &__e {
       @extend %flex-row;
       justify-content: flex-end;

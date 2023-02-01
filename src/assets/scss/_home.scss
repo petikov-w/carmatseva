@@ -97,10 +97,11 @@
     background-position-y: 45%;
     width: 80%;
     left: 200px;
+
     img {
       margin-left: 120px;
       width: 368px;
-      hight: 473px;
+      height: 473px;
     }
   }
 }
@@ -109,26 +110,37 @@
   &__info {
     //position: absolute;
     img {
-      margin-left: 120px;
+      //margin-left: 120px;
       width: 365px;
       height: 256px;
     }
+    .logo {
+      width: 60px;
+      height: 36px;
+    }
+    .logo-text {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 21px;
+    }
     .title {
       //position: absolute;
-      font-size: 40px;
+      font-size: 25px;
       font-weight: 900;
-      line-height: 40px;
-      width: 414px;
-      //margin-top: -150px;
+      line-height: 25px;
+      width: 194px;
+      margin-top: -180px;
+      text-align: center;
       //top: 150px;
     }
     .subtitle {
      // position: absolute;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 300;
-      line-height: 28px;
-      width: 588px;
-      top: 290px;
+      line-height: 23px;
+      width: 282px;
+      text-align: center;
+      //top: 290px;
     }
     .btn-order {
      // position: absolute;
