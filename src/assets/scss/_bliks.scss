@@ -1,0 +1,64 @@
+.section_hero {
+  &__blik-1 {
+    &-desktop {
+      @include blik(145px, 320px, 0, 45px, 41px, 330deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+  &__blik-2 {
+    &-desktop {
+      @include blik(136px, 297px, 0, 23px, 21px, 330deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+  &__blik-3 {
+    &-desktop {
+      @include blik(550px, -40px, 0, 75px, 68px, 300deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+  &__blik-4 {
+    &-desktop {
+      @include blik(513px, 13px, 0, 44px, 40px, 300deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+  &__blik-5 {
+    &-desktop {
+      @include blik(565px, 35px, 0, 14px, 13px, 300deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+}
+
+.section_bliks_footer {
+  position: relative;
+  &__blik-1 {
+    &-desktop {
+      @include blik(15px, 0, 1px, 264px, 233px, 360deg);
+    }
+    &-tablet {
+      @include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+  &__blik-2 {
+    &-desktop {
+      @include blik(82px, -50px, 0, 125px, 110px, 180deg);
+    }
+    &-tablet {
+      @include blik(91px, 0, 430px, 46px, 41px, 180deg);
+    }
+  }
+}
+
+

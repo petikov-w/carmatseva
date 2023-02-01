@@ -1,8 +1,8 @@
 <template lang="pug">
 footer(v-if="isDesktop")
-  .wrapper
-    img.blik-3(:src="Footer.blick" alt="blick")
-    img.blik-2(:src="Footer.blick" alt="blick")
+  .wrapper.section_bliks_footer
+    img.section_bliks_footer__blik-1-desktop(:src="BlickImage" alt="blick")
+    img.section_bliks_footer__blik-2-desktop(:src="BlickImage" alt="blick")
     .footer-section.flex_row__s
       .column.flex_col__s
        .column__title {{ Footer.title_1 }}
@@ -16,9 +16,9 @@ footer(v-if="isDesktop")
        .column__content {{ Header.text_mesto }}
 
 footer(v-if="isTablet")
-  .wrapper
-    img.blik-3-t(:src="Footer.blick" alt="blick")
-    img.blik-2-t(:src="Footer.blick" alt="blick")
+  .wrapper.section_bliks_footer
+    img.section_bliks_footer__blik-1-tablet(:src="BlickImage" alt="blick")
+    img.section_bliks_footer__blik-2-tablet(:src="BlickImage" alt="blick")
     .footer-section-t.flex_row__s
       .column.flex_col__s
         .column__title {{ Footer.title_1 }}
@@ -56,34 +56,35 @@ export default {
   components: {ListTelefons},
   setup() {
     const store = useStore();
+    const BlickImage = computed(()=> store.getters.getBlickImage);
     const Header = computed(()=> store.getters.getHeader);
     const Footer = computed(()=> store.getters.getFooter);
     const isMobile = computed(() => store.getters.getIsMobile);
     const isTablet = computed(() => store.getters.getIsTablet);
     const isDesktop = computed(() => store.getters.getIsDesktop);
-    return { isMobile, isTablet, isDesktop, Header, Footer }
+    return { isMobile, isTablet, isDesktop, Header, Footer, BlickImage }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 
-:deep(.telefon) {
+%font {
   font-size: 14px;
   font-weight: 300;
-  line-height: 18px;
   text-decoration: none;
   color: #000000;
   display: block;
 }
 
+:deep(.telefon) {
+  @extend %font;
+  line-height: 18px;
+}
+
 :deep(.telefon-m) {
-  font-size: 14px;
-  font-weight: 300;
+  @extend %font;
   line-height: 20px;
-  text-decoration: none;
-  color: #000000;
-  display: block;
 }
 
 </style>

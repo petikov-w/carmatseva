@@ -10,4 +10,7 @@ export default {
         img_background: { "image": require('@/assets/images/background-hero.webp'),
             "alt": "коврик подложка"}
             },
+        img_logo: { "image": require('@/assets/images/logo-header.svg'),
+            "alt": "логотип"}
+
     }

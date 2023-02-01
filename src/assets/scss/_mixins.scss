@@ -6,6 +6,7 @@
 }
 
 @mixin blik($top, $left, $right, $height, $width, $rotate ){
+  position: absolute;
   top: $top;
   @if $left == 0 {
     right: $right;

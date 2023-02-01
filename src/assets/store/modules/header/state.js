@@ -8,8 +8,6 @@ export default {
         list_telefons : ["79286570982", "79092984376"]
     },
     footer: {
-        blick: require('@/assets/images/blik.webp'),
-        blick_3: require('@/assets/images/blik-eva-s.webp'),
         icon_instagram: require('@/assets/images/instagram-icon.webp'),
         title_1: "МЫ В СОЦИАЛЬНЫХ СЕТЯХ",
         title_2: "КОНТАКТНЫЕ ТЕЛЕФОНЫ",

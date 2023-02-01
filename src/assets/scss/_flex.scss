@@ -20,6 +20,10 @@
       @extend %flex-row;
       justify-content: flex-end;
     }
+    &__sb {
+      @extend %flex-row;
+      justify-content: space-between;
+    }
   }
   &_col {
     &__s {
