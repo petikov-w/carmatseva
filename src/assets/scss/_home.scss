@@ -51,6 +51,19 @@
 }
 
 .section_hero-tablet {
+  &__logo {
+    margin-top: 60px;
+    .logo {
+      width: 100px;
+      height: 60px;
+    }
+    .logo-text {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 42px;
+      margin-left: 25px;
+    }
+  }
   &__info {
     position: absolute;
     .title {
@@ -59,7 +72,7 @@
       font-weight: 900;
       line-height: 40px;
       width: 414px;
-      top: 150px;
+      top: 180px;
     }
     .subtitle {
       position: absolute;
@@ -67,7 +80,7 @@
       font-weight: 300;
       line-height: 28px;
       width: 588px;
-      top: 290px;
+      top: 320px;
     }
     .btn-order {
       position: absolute;
@@ -75,7 +88,7 @@
       font-weight: 700;
       line-height: 18px;
       color: #ffffff;
-      top: 350px;
+      top: 380px;
       letter-spacing: 1px;
       padding: 15px 30px;
       border-radius: 7px;
@@ -97,6 +110,7 @@
     background-position-y: 45%;
     width: 80%;
     left: 200px;
+    top: 38px;
 
     img {
       margin-left: 120px;
@@ -108,15 +122,14 @@
 
 .section_hero-mobile {
   &__info {
-    //position: absolute;
     img {
-      //margin-left: 120px;
       width: 365px;
       height: 256px;
     }
     .logo {
       width: 60px;
       height: 36px;
+      margin: 30px 0;
     }
     .logo-text {
       font-size: 18px;
@@ -124,33 +137,30 @@
       line-height: 21px;
     }
     .title {
-      //position: absolute;
       font-size: 25px;
       font-weight: 900;
       line-height: 25px;
       width: 194px;
-      margin-top: -180px;
+      margin-top: -230px;
       text-align: center;
-      //top: 150px;
     }
     .subtitle {
-     // position: absolute;
       font-size: 20px;
       font-weight: 300;
       line-height: 23px;
       width: 282px;
       text-align: center;
+      margin: 10px 0;
       //top: 290px;
     }
     .btn-order {
-     // position: absolute;
-      font-size: 15px;
+      font-size: 10px;
       font-weight: 700;
-      line-height: 18px;
+      line-height: 11px;
       color: #ffffff;
       top: 350px;
       letter-spacing: 1px;
-      padding: 15px 30px;
+      padding: 8px 15px;
       border-radius: 7px;
       text-transform: uppercase;
       outline: none;
@@ -162,23 +172,5 @@
       }
     }
   }
-  //img {
-  //  margin-left: 120px;
-  //  width: 365px;
-  //  hight: 256px;
-  //}
-  &__img{
-    //position: relative;
-    //background: url("../images/background-hero.webp") no-repeat;
-    //background-size: 525px 368px;
-    //background-position-x: 10%;
-    //background-position-y: 45%;
-    //width: 80%;
-    //left: 200px;
-    //img {
-    //  margin-left: 120px;
-    //  width: 365px;
-    //  hight: 256px;
-    //}
-  }
-}
+ }
+

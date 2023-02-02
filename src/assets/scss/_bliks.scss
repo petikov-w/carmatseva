@@ -4,7 +4,8 @@
       @include blik(145px, 320px, 0, 45px, 41px, 330deg);
     }
     &-tablet {
-      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+      //@include blik(145px, 320px, 0, 45px, 41px, 330deg);
+      @include blik(180px, 120px, 0, 45px, 41px, 330deg);
     }
   }
   &__blik-2 {
@@ -12,7 +13,8 @@
       @include blik(136px, 297px, 0, 23px, 21px, 330deg);
     }
     &-tablet {
-      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+     // @include blik(136px, 297px, 0, 23px, 21px, 330deg);
+      @include blik(116px, 297px, 0, 23px, 21px, 330deg);
     }
   }
   &__blik-3 {

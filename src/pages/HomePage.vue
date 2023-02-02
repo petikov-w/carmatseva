@@ -17,12 +17,15 @@ div(v-if="isDesktop")
 div(v-if="isTablet")
  .wrapper-tablet
    .section_hero-tablet.flex_row__sb
-   .section_hero-tablet__info
-     .title {{ Home.title }}
-     .subtitle {{ Home.subtitle }}
-     button.btn-order {{ Home.button_text }}
-     //img.section_hero__blik-1-desktop(:src="BlickImage" alt="blick")
-     //img.section_hero__blik-2-desktop(:src="BlickImage" alt="blick")
+     .section_hero-tablet__info
+       .section_hero-tablet__logo.flex_row__cc
+         img.logo(:src="Home.img_logo.image" :alt="Home.img_logo.alt")
+         .logo-text {{ Home.logo }}
+       .title {{ Home.title }}
+       .subtitle {{ Home.subtitle }}
+       button.btn-order {{ Home.button_text }}
+       img.section_hero__blik-1-tablet(:src="BlickImage" alt="blick")
+       img.section_hero__blik-2-tablet(:src="BlickImage" alt="blick")
      //img.section_hero__blik-3-desktop(:src="BlickImage" alt="blick")
      //img.section_hero__blik-4-desktop(:src="BlickImage" alt="blick")
      //img.section_hero__blik-5-desktop(:src="BlickImage" alt="blick")
