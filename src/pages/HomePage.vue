@@ -1,18 +1,18 @@
 <template lang="pug">
+- var hero = ['section_hero','flex_row__sb']
 div(v-if="isDesktop")
  .wrapper
-   .section_hero.flex_row__sb
+   //.section_hero.flex_row__sb
+   div(class=hero)
      .section_hero__info
        .title {{ Home.title }}
        .subtitle {{ Home.subtitle }}
        button.btn-order {{ Home.button_text }}
-       img.section_hero__blik-1-desktop(:src="BlickImage" alt="blick")
-       img.section_hero__blik-2-desktop(:src="BlickImage" alt="blick")
-       img.section_hero__blik-3-desktop(:src="BlickImage" alt="blick")
-       img.section_hero__blik-4-desktop(:src="BlickImage" alt="blick")
-       img.section_hero__blik-5-desktop(:src="BlickImage" alt="blick")
+       include ../assets/pug/blik_desktop
      .section_hero__img
        img(:src="Home.img_mats.image" :alt="Home.img_mats.alt")
+   .section_card.flex_row__c
+     card-list(:card_info="cards")
 
 div(v-if="isTablet")
  .wrapper-tablet
@@ -24,11 +24,7 @@ div(v-if="isTablet")
        .title {{ Home.title }}
        .subtitle {{ Home.subtitle }}
        button.btn-order {{ Home.button_text }}
-       img.section_hero__blik-1-tablet(:src="BlickImage" alt="blick")
-       img.section_hero__blik-2-tablet(:src="BlickImage" alt="blick")
-     //img.section_hero__blik-3-desktop(:src="BlickImage" alt="blick")
-     //img.section_hero__blik-4-desktop(:src="BlickImage" alt="blick")
-     //img.section_hero__blik-5-desktop(:src="BlickImage" alt="blick")
+       include ../assets/pug/blik_tablet
    .section_hero-tablet__img
      img(:src="Home.img_mats.image" :alt="Home.img_mats.alt")
 
@@ -47,17 +43,19 @@ div(v-if="isMobile")
 <script>
 import {useStore} from 'vuex';
 import {computed} from "vue";
+import CardList from "@/components/CardList.vue";
 export default {
   name: "home",
-  components: {},
+  components: {CardList},
   setup() {
     const store = useStore();
     const Home = computed(()=> store.getters.getHome);
+    const cards = computed(() => store.getters.getCards);
     const BlickImage = computed(()=> store.getters.getBlickImage);
     const isMobile = computed(() => store.getters.getIsMobile);
     const isTablet = computed(() => store.getters.getIsTablet);
     const isDesktop = computed(() => store.getters.getIsDesktop);
-    return { isMobile, isTablet, isDesktop, Home, BlickImage }
+    return { isMobile, isTablet, isDesktop, Home, BlickImage, cards }
   }
 }
 </script>

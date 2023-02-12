@@ -41,6 +41,30 @@
       //@include blik(82px, 115px, 0, 97px, 86px, 0);
     }
   }
+  &__blik-6 {
+    &-desktop {
+      @include blik(680px, -200px, 0, 543px, 481px, 0deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+  &__blik-7 {
+    &-desktop {
+      @include blik(870px, 340px, 0, 264px, 233px, 0deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
+  &__blik-8 {
+    &-desktop {
+      @include blik(1100px, 265px, 0, 125px, 110px, 0deg);
+    }
+    &-tablet {
+      //@include blik(82px, 115px, 0, 97px, 86px, 0);
+    }
+  }
 }
 
 .section_bliks_footer {
@@ -63,4 +87,7 @@
   }
 }
 
-
+.hide {
+  //display: none;
+  background-color: #4468e0;
+}
