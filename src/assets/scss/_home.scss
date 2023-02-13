@@ -1,3 +1,38 @@
+.section_logo_nav {
+  margin-top: 50px;
+  &__logo {
+    img {
+      width: 100px;
+      height: 60px;
+    }
+    .logo-text {
+      @include font(36px, 900, 42px, #000000);
+      font-style: italic;
+      text-transform: uppercase;
+      padding-left: 11px;
+    }
+  }
+  &__nav {
+    width: 30%;
+    ul{
+      list-style: none;
+      a {
+        @include font(20px, 300, 21px, #737373);
+        text-transform: lowercase;
+        text-decoration: none;
+        &:hover {
+          padding-bottom: 5px;
+          border-bottom: 1.5px solid #4d4d4d;
+        }
+      }
+      li {
+
+      }
+    }
+
+  }
+}
+
 .section_hero {
   &__info {
     position: absolute;
@@ -111,7 +146,6 @@
     width: 80%;
     left: 200px;
     top: 38px;
-
     img {
       margin-left: 120px;
       width: 368px;

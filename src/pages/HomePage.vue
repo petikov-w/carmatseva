@@ -2,7 +2,18 @@
 - var hero = ['section_hero','flex_row__sb']
 div(v-if="isDesktop")
  .wrapper
-   //.section_hero.flex_row__sb
+   .section_logo_nav.flex_row__sb
+     .section_logo_nav__logo.flex_row__cc
+       img.logo(:src="Home.img_logo.image" :alt="Home.img_logo.alt")
+       .logo-text {{ Home.logo }}
+     .section_logo_nav__nav
+       ul.flex_row__sb
+        li
+         a(href='#otziv') "отзывы"
+        li
+         a(href="#whatisit") "что это?"
+        li
+         a(href="#contacts") контакты
    div(class=hero)
      .section_hero__info
        .title {{ Home.title }}
@@ -11,8 +22,10 @@ div(v-if="isDesktop")
        include ../assets/pug/blik_desktop
      .section_hero__img
        img(:src="Home.img_mats.image" :alt="Home.img_mats.alt")
-   .section_card.flex_row__c
+   .titleCards(v-html="cardsTitle" )
+   .section_card.flex_row__sb
      card-list(:card_info="cards")
+ .section_slider
 
 div(v-if="isTablet")
  .wrapper-tablet
@@ -51,11 +64,12 @@ export default {
     const store = useStore();
     const Home = computed(()=> store.getters.getHome);
     const cards = computed(() => store.getters.getCards);
+    const cardsTitle = computed(() => store.getters.getCardsTitle);
     const BlickImage = computed(()=> store.getters.getBlickImage);
     const isMobile = computed(() => store.getters.getIsMobile);
     const isTablet = computed(() => store.getters.getIsTablet);
     const isDesktop = computed(() => store.getters.getIsDesktop);
-    return { isMobile, isTablet, isDesktop, Home, BlickImage, cards }
+    return { isMobile, isTablet, isDesktop, Home, BlickImage, cards, cardsTitle }
   }
 }
 </script>

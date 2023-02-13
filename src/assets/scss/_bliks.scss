@@ -1,3 +1,5 @@
+$delta_bliks_section_cards: 165px;
+
 .section_hero {
   &__blik-1 {
     &-desktop {
@@ -43,7 +45,7 @@
   }
   &__blik-6 {
     &-desktop {
-      @include blik(680px, -200px, 0, 543px, 481px, 0deg);
+      @include blik(680px+$delta_bliks_section_cards, -200px, 0, 543px, 481px, 0deg);
     }
     &-tablet {
       //@include blik(82px, 115px, 0, 97px, 86px, 0);
@@ -51,7 +53,7 @@
   }
   &__blik-7 {
     &-desktop {
-      @include blik(870px, 340px, 0, 264px, 233px, 0deg);
+      @include blik(900px+$delta_bliks_section_cards, 340px, 0, 264px, 233px, 0deg);
     }
     &-tablet {
       //@include blik(82px, 115px, 0, 97px, 86px, 0);
@@ -59,7 +61,7 @@
   }
   &__blik-8 {
     &-desktop {
-      @include blik(1100px, 265px, 0, 125px, 110px, 0deg);
+      @include blik(1140px+$delta_bliks_section_cards, 245px, 0, 125px, 110px, 0deg);
     }
     &-tablet {
       //@include blik(82px, 115px, 0, 97px, 86px, 0);

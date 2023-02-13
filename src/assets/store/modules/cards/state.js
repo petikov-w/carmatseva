@@ -1,4 +1,5 @@
 export default {
+    cards_title: "Что такое <span class='colortext'>EVA</span> коврики?",
     cards:  [
                 { image_src : require('@/assets/images/material.webp'),
                   image_alt: "материал",
