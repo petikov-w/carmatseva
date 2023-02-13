@@ -1,11 +1,11 @@
 // Настройка роутинга для продакшена
-// import {createRouter, createWebHistory} from "vue-router";
-// const routerHistory = createWebHistory();
+import {createRouter, createWebHistory} from "vue-router";
+const routerHistory = createWebHistory();
 //===============================================================
 
 // Настройка роутинга для разработки
-import {createRouter, createWebHashHistory} from "vue-router";
-const routerHistory = createWebHashHistory();
+// import {createRouter, createWebHashHistory} from "vue-router";
+// const routerHistory = createWebHashHistory();
 
 //===============================================================
 

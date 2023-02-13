@@ -8,12 +8,10 @@ div(v-if="isDesktop")
        .logo-text {{ Home.logo }}
      .section_logo_nav__nav
        ul.flex_row__sb
-        li
-         a(href='#otziv') "отзывы"
-        li
-         a(href="#whatisit") "что это?"
-        li
-         a(href="#contacts") контакты
+        div(v-for="(item, index) in Home.nav_menu" :key="index")
+         li
+          a(:href="item.link") {{ item.item }}
+   a(id="whatisit")
    div(class=hero)
      .section_hero__info
        .title {{ Home.title }}
@@ -25,8 +23,9 @@ div(v-if="isDesktop")
    .titleCards(v-html="cardsTitle" )
    .section_card.flex_row__sb
      card-list(:card_info="cards")
+ a(id="otziv")
  .section_slider
-
+ a(id="contacts")
 div(v-if="isTablet")
  .wrapper-tablet
    .section_hero-tablet.flex_row__sb
